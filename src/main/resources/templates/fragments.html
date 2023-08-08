@@ -50,9 +50,7 @@
         </tr>
         <tr>
             <td th:text="${#strings.toUpperCase('skill')}">Skill</td>
-            <td th:text="${job.coreCompetency}">
-                <a th:href="@{/list/jobs(column=${category.key},value=${job.coreCompetency})}" th:text="${job.coreCompetency}"></a>
-            </td>
+            <td th:text="${job.coreCompetency}"></td>
         </tr>
     </table>
 
