@@ -20,12 +20,38 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a th:href="@{/search}">Search</a></li>
-                    <li><a th:href="@{/list}">List</a></li>
+                    <li th:each="action : ${actions}"><a th:href="@{'/' + ${action.key}}" th:text="${action.value}">Search</a></li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <table th:fragment="jobs-list" class="job-listing" th:each="job : ${jobs}">
+        <tr>
+            <td th:text="${#strings.toUpperCase('id')}">ID</td>
+            <td th:text="${job.id}"></td>
+        </tr>
+        <tr>
+            <td th:text="${#strings.toUpperCase('name')}">Name</td>
+            <td th:text="${job.name}"></td>
+        </tr>
+        <tr>
+            <td th:text="${#strings.toUpperCase('employer')}">Employer</td>
+            <td th:text="${job.employer}"></td>
+        </tr>
+        <tr>
+            <td th:text="${#strings.toUpperCase('location')}">Location</td>
+            <td th:text="${job.location}"></td>
+        </tr>
+        <tr>
+            <td th:text="${#strings.toUpperCase('position type')}">Position Type</td>
+            <td th:text="${job.positionType}"></td>
+        </tr>
+        <tr>
+            <td th:text="${#strings.toUpperCase('skill')}">Skill</td>
+            <td th:text="${job.coreCompetency}"></td>
+        </tr>
+    </table>
 
 </body>
 </html>
