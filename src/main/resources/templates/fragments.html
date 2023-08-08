@@ -37,27 +37,19 @@
         </tr>
         <tr>
             <td th:text="${#strings.toUpperCase('employer')}">Employer</td>
-            <td>
-                <a th:href="@{/list/jobs(column=employer,value=${job.employer})}" th:text="${job.employer}"></a>
-            </td>
+            <td th:text="${job.employer}"></td>
         </tr>
         <tr>
             <td th:text="${#strings.toUpperCase('location')}">Location</td>
-            <td>
-                <a th:href="@{/list/jobs(column=location,value=${job.location})}" th:text="${job.location}"></a>
-            </td>
+            <td th:text="${job.location}"></td>
         </tr>
         <tr>
             <td th:text="${#strings.toUpperCase('position type')}">Position Type</td>
-            <td>
-                <a th:href="@{/list/jobs(column=positionType,value=${job.positionType})}" th:text="${job.positionType}"></a>
-            </td>
+            <td th:text="${job.positionType}"></td>
         </tr>
         <tr>
             <td th:text="${#strings.toUpperCase('skill')}">Skill</td>
-            <td>
-                <a th:href="@{/list/jobs(column=coreCompetency,value=${job.coreCompetency})}" th:text="${job.coreCompetency}"></a>
-            </td>
+            <td th:text="${job.coreCompetency}"></td>
         </tr>
     </table>
 
